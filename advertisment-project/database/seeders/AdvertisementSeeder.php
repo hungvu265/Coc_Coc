@@ -3,10 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\AdvertismentModel;
+use App\Models\AdvertisementModel;
 use Illuminate\Support\Str;
 
-class AdvertismentSeeder extends Seeder
+class AdvertisementSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class AdvertismentSeeder extends Seeder
      */
     public function run()
     {
-        AdvertismentModel::create([
+        AdvertisementModel::create([
             'id' => Str::uuid(),
             'title' => Str::random(50),
             'description' => Str::random(100),

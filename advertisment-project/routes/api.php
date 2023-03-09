@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('advertisments', \App\Http\Controllers\AdvertismentController::class)
+Route::resource('advertisements', \App\Http\Controllers\AdvertisementController::class)
     ->except(['create', 'edit', 'update', 'destroy']);

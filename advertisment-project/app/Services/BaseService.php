@@ -4,12 +4,6 @@ namespace App\Services;
 
 abstract class BaseService
 {
-
-    /**
-     * Base repository
-     *
-     * @var \Prettus\Repository\Eloquent\BaseRepository
-     */
     protected $repository;
 
     protected $with_load = [];
@@ -35,5 +29,10 @@ abstract class BaseService
         $row->delete();
 
         return true;
+    }
+
+    public function create($data)
+    {
+        return $this->repository->create($data);
     }
 }

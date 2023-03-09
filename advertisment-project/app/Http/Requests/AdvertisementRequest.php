@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AdvertismentRequest extends FormRequest
+class AdvertisementRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class AdvertismentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class AdvertismentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|string|max:200',
+            'description' => 'required|string|max:1000',
+            'price' => 'required|numeric',
+             'link_image' => 'required|max:3'
         ];
     }
 }

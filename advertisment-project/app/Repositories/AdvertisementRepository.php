@@ -3,9 +3,9 @@
 namespace App\Repositories;
 
 use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
-use App\Models\AdvertismentModel;
+use App\Models\AdvertisementModel;
 
-class AdvertismentRepository extends BaseRepository
+class AdvertisementRepository extends BaseRepository
 {
     /**
      * @return string
@@ -13,6 +13,6 @@ class AdvertismentRepository extends BaseRepository
      */
     public function model()
     {
-        return AdvertismentModel::class;
+        return AdvertisementModel::class;
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AdvertismentLinkImageTable extends Migration
+class AdvertisementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AdvertismentLinkImageTable extends Migration
      */
     public function up()
     {
-        Schema::create('advertisment_link_image', function(Blueprint $table) {
-            $table->uuid('advertisment_id');
-            $table->uuid('link_image_id');
+        Schema::create('advertisements', function(Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('title', 200);
+            $table->text('description');
+            $table->string('price', 15);
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class AdvertismentLinkImageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('advertisment_link_image');
+        Schema::dropIfExists('advertisements');
     }
 }

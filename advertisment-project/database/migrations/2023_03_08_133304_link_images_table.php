@@ -15,6 +15,7 @@ class LinkImagesTable extends Migration
     {
         Schema::create('link_images', function(Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->uuid('advertisement_id');
             $table->string('link');
             $table->timestamps();
         });
